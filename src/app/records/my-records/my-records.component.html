@@ -1,0 +1,8 @@
+<div>
+    <h1>List Of MyUsers</h1>
+    @if(myRecords.length === 0){
+    <div class="empty">No records available!</div>
+    } @for(user of myRecords; track user.id){
+    <app-record-item [user]="user"></app-record-item>
+    }
+  </div>

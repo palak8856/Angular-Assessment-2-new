@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <h1>Customer Details</h1>
+    <div>
+      <h2>{{ "Name: " + recordDetails?.title }}</h2>
+      <p>{{ "Email: " + recordDetails?.author }}</p>
+      <p>{{ "Phone Number: " + recordDetails?.ISBN }}</p>
+      @if(isAdmin){
+          <div id="button-group">
+              <button (click)="onDelete()">Delete</button>
+          </div>
+      }
+    </div>
+  </div>

@@ -1,0 +1,16 @@
+<div id="card">
+    <div>
+      <h3>{{ user.name }}</h3>
+    </div>
+    <div id="button-group">
+      <div>
+        @if(!isAdmin){     
+        <button (click)="onView()" >View</button>      
+    } 
+    @else {
+        <button>Edit</button>
+        <button (click)="onView()" >View</button>
+        }
+      </div>
+    </div>
+  </div>

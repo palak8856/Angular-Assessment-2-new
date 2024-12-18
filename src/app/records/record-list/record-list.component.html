@@ -1,0 +1,7 @@
+<div>
+    <h1>List of Users</h1>
+
+    @for(user of users; track user.id){
+        <app-record-item [user]="user"></app-record-item>
+    }
+</div>

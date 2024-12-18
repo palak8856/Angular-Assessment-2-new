@@ -1,0 +1,31 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="control">
+      <label>Name</label>
+      <input type="text" name="name" formControlName="name" />
+    </div>
+    @if(isNameInvalid){
+    <p class="error">Name is required</p>
+    }
+    <div class="control">
+      <label>Email</label>
+      <input type="text" name="email" formControlName="email" />
+    </div>
+    @if(isEmailInvalid){
+    <p class="error">Email is required</p>
+    }
+    <div class="control">
+      <label>Phone Number</label>
+      <input type="text" name="number" formControlName="number" />
+    </div>
+    @if(isPhoneNumberInvalid){
+    <p class="error">Phone Number is required</p>
+    }
+    <div class="control">
+        <label>Address</label>
+        <input type="text" name="address" formControlName="address" />
+      </div>
+      @if(isAddressInvalid){
+      <p class="error">Address is required</p>
+      }
+    <button type="submit">Submit</button>
+  </form>
